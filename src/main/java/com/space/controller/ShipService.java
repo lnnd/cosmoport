@@ -43,7 +43,7 @@ public class ShipService {
             @RequestParam(name = "maxRating",   required = false) Double maxRating,
             @RequestParam(name = "order",       required = false, defaultValue = "ID") ShipOrder order,
             @RequestParam(name = "pageNumber",  required = false, defaultValue = "0") Integer pageNumber,
-            @RequestParam(name = "pageSize",    required = false, defaultValue= "3") Integer pageSize,
+            @RequestParam(name = "pageSize",    required = false, defaultValue = "3") Integer pageSize,
             Model model
     ) {
         List<Ship> ships = getListWithFilters(name, planet, shipType, after, before, isUsed, minSpeed, maxSpeed, minCrewSize, maxCrewSize, minRating, maxRating);
@@ -96,9 +96,6 @@ public class ShipService {
             if (i >= start && i <= end)
                 result.add(ships.get(i));
         }
-
-        model.addAttribute("Code", HttpStatus.OK);
-        model.addAttribute("Content", result);
 
         return result;
     }

@@ -340,4 +340,8 @@ public class ShipService {
 
     }
 
+    public void test() {
+        System.out.println("yraaaaa");
+    }
+
 }

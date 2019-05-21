@@ -341,7 +341,7 @@ public class ShipService {
     }
 
     public void test2() {
-
+        System.out.println("yraaaaa");
     }
 
     public void test() {
